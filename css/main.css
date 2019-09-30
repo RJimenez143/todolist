@@ -1,3 +1,39 @@
-body{
-    background-color: aliceblue;
+table {
+    border-collapse: collapse;
+    width: 40%;
+   
+  }
+  th, td {
+    text-align: left;
+    padding: 8px;
+    font-family: monospace;
+    
+  }
+  
+  tr:nth-child(even){background-color: #f2f2f2}
+  
+  th {
+    background-color: #808080;
+    color: white;
+    font-family: monospace;
+  }
+  .container{
+      margin-bottom: 4000px;
+      margin-right: -800px;
+      margin-left: 500px;
+      margin-top: 50px;
+  }
+  button{
+      background-color: #e7e7e7; color: black;
+      border: none;
+      color: black;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      font-family: monospace;
+    }
+.todolist{
+    font-family: monospace;
 }
