@@ -39,6 +39,10 @@ h2 .title{
 }
 .viewButton{
     margin-left: 540px;
+    text-decoration: none;
+}
+.usersName{
+  text-decoration: none;
 }
 
   

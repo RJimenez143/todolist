@@ -4,12 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/adduser.css">
     <title>Document</title>
 </head>
 <body>
-    <form action="">
-        <label for="Name">Name</label>
-    </form>
+        <div class="addUserContainer">
+            <h2 class="title">ADD USER</h2>
+                <form><br>
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Firstname"><br><br>
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Lastname"><br><br>
+                    <label for="occupation">Occupation</label>
+                    <input type="text" id="occupation" name="occupation" placeholder="Occupation"><br><br>
+                    <label for="profilepicture">Profile Picture</label>
+                    <input type="file" id="profilepicture" name="profilepicture" placeholder="Picture"><br><br><br>
+                    <input type="submit" value="Submit">
+                    <input type="submit" value="Back">
+                </form>
+        </div>
     
 </body>
 </html>

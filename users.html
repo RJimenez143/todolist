@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/users.css">
     <title>Document</title>
 </head>
 <body class="container">
         <div>
             <h2 class="title">Users List</h2>
-            <input class="searchButton" placeholder="Search"></input>
+            <input class="searchButton" placeholder="Search" id="search"></input>
             <button class="viewButton"><a href="/index.html">View Todos</a> </button>
-            <table>
+            <table id="users">
                 <tr>
                     <th>ID</th>
                     <th>FIRSTNAME</th>
@@ -22,9 +22,9 @@
                     <th>ACTIONS</th>
                 </tr>
                 <tbody>
-                    <tr>
+                    <!-- <tr>
                         <td>1</td>
-                        <td>Riche </td>
+                        <td><a href="/userdetails.html" class="usersName">Riche </a></td>
                         <td>Jimenez</td>
                         <td>Developer</td>
                         <td>5</td>
@@ -77,13 +77,15 @@
                                 <button>Edit</button>
                                 <button>Delete</button>
                         </td>
-                    </tr>
+                    </tr> -->
                 </tbody>
             </table>
             <button>&lt;</button>
             <span>Page 2/2</span>
             <button>&gt; </button>
+            <button><a href="/adduser.html">Add</a> </button>
             </div>
     </body>
-
+    <script src="/js/data.js"></script>
+   
 </html>

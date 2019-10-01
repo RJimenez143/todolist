@@ -1,0 +1,33 @@
+input[type=text], select {
+    width: 300px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+   
+  }
+  
+  input[type=submit] {
+    width: 130px;
+    background-color: #e7e7e7; color: black;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 12px;
+    font-family: monospace;
+    border-radius: 25px;
+    border: 2px solid #000000;
+    
+  }
+  .addUserContainer{
+      border-style: double;
+      border-radius: 10px;
+      width: 350px;
+      height: 500px;
+      padding-left: 40px;
+      font-family: monospace;
+      margin-left: 750px;
+      margin-top: 250px;
+  }
