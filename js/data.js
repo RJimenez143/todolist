@@ -80,50 +80,79 @@ profilepicture: "https://unsplash.com/photos/JAkWUtmsFXM"
                                 
     }
 ];
-const userData = [
 
-];
-const tableElement=document.getElementById('users');
-
-const forEachCallbackFn =function(user){
-const rowElement = document.createElement('tr');
-
-rowElement.classList='row';
-
-const id= document.createElement('td');
-const firstname= document.createElement('td');
-const lastname= document.createElement('td');
-const occupation=document.createElement('td')
-
-id.textContent=user.id;
-firstname.textContent=user.firstname;
-lastname.textContent=user.lastname;
-occupation.textContent=user.occupation;
-
-rowElement.appendChild(id);
-rowElement.appendChild(firstname);
-rowElement.appendChild(lastname);
-rowElement.appendChild(occupation);
-
-tableElement.children[1].appendChild(rowElement);
-
-}
-
-userData.forEach(forEachCallbackFn);
+const tableElement = document.getElementById('users');
 
 const searchInput = document.getElementById('search');
 
-searchInput.addEventListener('keyup', (event) =>{
-    const searchText = searchInput.value;
+searchInput.addEventListener('keyup',(event =>{
+    const searchText = searchInput.value.toLowerCase();
+
     console.log(searchText);
 
-    const filteredUsers =userData.filter((user) =>{
-
-        return user.firstname.toLocaleLowerCase() === searchText||
-        user.lastname.toLocaleLowerCase() ===searchText||
-        user.occupation.toLocaleLowerCase() ===searchText;
+    if(!searchText){
         
-    });
+        const tbody = tableElement.children[1];
+        Array.from(tbody.children).forEach((row)=>{
+            row.remove();
+        })
+        addRows(userData);
+    }else{
 
+        const filterUsers = userData.filter((users) =>{
+            return users.firstname.toLowerCase() === searchText || 
+            users.lastname.toLowerCase() === searchText ||
+            users.occupation.toLowerCase() ==  searchText
+
+        });
+        console.log(filterUsers);
+
+        const clearRows = ()=>{
+            
+        }
+        const tbody = tableElement.children[1];
+        Array.from(tbody.children).forEach((row)=>{
+            row.remove();
+        })
+
+        addRows(filterUsers);
+}
+
+    const clearRows = ()=>{
+        
+    }
+
+}));
+
+const addRows = (users)=>{
+
+    const forEachCallBackFn = function(user){
+        console.log(user);
+        const rowElement = document.createElement('tr');
     
-});
+        rowElement.classList = 'row';
+    
+        const id = document.createElement ('td');
+        const firstname = document.createElement ('td');
+        const lastname = document.createElement ('td');
+        const occupation = document.createElement ('td');
+    
+        id.textContent = user.id;
+        firstname.textContent = user.firstname;
+        lastname.textContent = user.lastname;
+        occupation.textContent = user.occupation;
+    
+        rowElement.appendChild(id);
+        rowElement.appendChild(firstname);
+        rowElement.appendChild(lastname);
+        rowElement.appendChild(occupation);
+    
+        // tableElement.appendChild(rowElement);
+        tableElement.children[1].appendChild(rowElement);
+    
+    }
+    
+    users.forEach(forEachCallBackFn);
+}
+
+addRows(userData);
